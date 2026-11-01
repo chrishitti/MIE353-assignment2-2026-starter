@@ -39,7 +39,7 @@ public class Main {
         
         // EXTRA MAIN FUNCTION CALLS CAN GO BELOW:
 
-
+        saveGradCourses();
         
       }
       catch (Exception e) {
@@ -85,11 +85,20 @@ public class Main {
     CMS.commit();
   }
 
-  // NEW FUNCTION FOR PART 2 BELOW (AND NEWLY CREATED .SQL FILE)
+  // NEW METHOD FOR PART 2 BELOW (AND NEWLY CREATED .SQL FILE)
   public static void loadTeachesData() throws SQLException {
     CMS.addSqlChange(ctx -> {
       LoadTeaches.execute(ctx);
     });
     CMS.commit();
   }
+
+  //PART 3 METHOD DEFINITION
+  public static void saveGradCourses() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+        SaveGradCourses.execute(ctx);
+    });
+    CMS.commit();
+}
+
 }
