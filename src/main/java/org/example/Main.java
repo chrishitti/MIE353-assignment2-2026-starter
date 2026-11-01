@@ -54,6 +54,7 @@ public class Main {
     loadProfessorData();
     loadCourseData();
     loadTranscriptData();
+    loadTeachesData(); // ADDED FOR PART 2
   }
 
   public static void loadStudentData() throws SQLException {
@@ -80,6 +81,14 @@ public class Main {
   public static void loadTranscriptData() throws SQLException {
     CMS.addSqlChange(ctx -> {
       LoadTranscript.execute(ctx);
+    });
+    CMS.commit();
+  }
+
+  // NEW FUNCTION FOR PART 2 BELOW (AND NEWLY CREATED .SQL FILE)
+  public static void loadTeachesData() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      LoadTeaches.execute(ctx);
     });
     CMS.commit();
   }
