@@ -33,13 +33,22 @@ public class Main {
 
         //Example: saving a table to CSV
         CMS.addSqlChange(ctx -> {
-          SaveStudents.execute(ctx);
+          SaveStudrts.execute(ctx);
         });
         CMS.commit();
         
         // EXTRA MAIN FUNCTION CALLS CAN GO BELOW:
 
         saveGradCourses();
+        query1();
+        query2();
+        query3();
+        query4();
+        query5();
+        query6();
+        query7();
+        query8();
+
         
       }
       catch (Exception e) {
@@ -101,4 +110,54 @@ public class Main {
     CMS.commit();
 }
 
+
+  //run each query in SQL and save its header and rows to CSV
+  public static void query1() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      SaveQuery1.execute(ctx);
+    });
+    CMS.commit();
+  }
+  public static void query2() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      SaveQuery2.execute(ctx);
+    });
+    CMS.commit();
+  }
+  public static void query3() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      SaveQuery3.execute(ctx);
+    });
+    CMS.commit();
+  }
+  public static void query4() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      SaveQuery4.execute(ctx);
+    });
+    CMS.commit();
+  }
+  public static void query5() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      SaveQuery5.execute(ctx);
+    });
+    CMS.commit();
+  }
+  public static void query6() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      SaveQuery6.execute(ctx);
+    });
+    CMS.commit();
+  }
+  public static void query7() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      SaveQuery7.execute(ctx);
+    });
+    CMS.commit();
+  }
+  public static void query8() throws SQLException {
+    CMS.addSqlChange(ctx -> {
+      SaveQuery8.execute(ctx);
+    });
+    CMS.commit();
+  }
 }
